@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<!-- Declares the document type as HTML5 -->
+<html lang="en">
+<head>
+  <!-- Sets character encoding -->
+  <meta charset="UTF-8" />
+  <!-- Sets viewport for responsive design on mobile -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Title that appears in browser tab -->
+  <title>Enhanced HTML5 Page with Form</title>
+
+  <!-- Internal CSS for simple styling -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      line-height: 1.6;
+    }
+
+    header, section, footer {
+      margin-bottom: 40px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    th, td {
+      border: 1px solid #999;
+      padding: 8px;
+      text-align: left;
+    }
+
+    fieldset {
+      margin-top: 20px;
+      padding: 15px;
+      border: 1px solid #aaa;
+    }
+
+    legend {
+      font-weight: bold;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 10px 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Page header section -->
+  <header>
+    <h1>Welcome to My Enhanced HTML5 Page</h1>
+    <p>This page demonstrates the use of lists, tables, media, and forms with validation.</p>
+  </header>
+
+  <!-- Unordered list section -->
+  <section>
+    <h2>📌 My Favorite Programming Languages</h2>
+    <!-- Unordered list with 4 items -->
+    <ul>
+      <li>Python</li>
+      <li>JavaScript</li>
+      <li>HTML & CSS</li>
+      <li>Java</li>
+    </ul>
+  </section>
+
+  <!-- Table section to organize data -->
+  <section>
+    <h2>📊 Programming Language Popularity</h2>
+    <!-- Table with 3 columns: language, popularity, use case -->
+    <table>
+      <thead>
+        <tr>
+          <th>Language</th>
+          <th>Popularity (%)</th>
+          <th>Use Case</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Python</td>
+          <td>29.9</td>
+          <td>Data Science, AI, Web Dev</td>
+        </tr>
+        <tr>
+          <td>JavaScript</td>
+          <td>19.1</td>
+          <td>Frontend Development</td>
+        </tr>
+        <tr>
+          <td>Java</td>
+          <td>15.3</td>
+          <td>Enterprise Apps</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Media section to embed video and image -->
+  <section>
+    <h2>🎬 Media Content</h2>
+
+    <!-- HTML5 video element with controls -->
+    <video controls width="500">
+      <!-- MP4 video source -->
+      <source src="sample-vedio.mp4" type="video/mp4" />
+      <!-- Message if browser doesn't support video -->
+      Your browser does not support the video tag.
+    </video>
+
+    <p>HTML5 Logo:</p>
+    <!-- HTML image with alt text -->
+    <img src="html-5.png" alt="HTML5 Logo" width="150" />
+  </section>
+
+  <!-- Form section with validation -->
+  <section>
+    <h2>📝 Contact & Feedback Form</h2>
+
+    <!-- Form element, POST method, autocomplete enabled -->
+    <form action="#" method="post" autocomplete="on">
+      
+      <!-- Fieldset for personal information -->
+      <fieldset>
+        <legend>Personal Information</legend>
+
+        <!-- Name input (required, min length) -->
+        <label for="name">Full Name *</label>
+        <input type="text" id="name" name="name" required minlength="3" placeholder="e.g. Jane Doe" />
+
+        <!-- Email input with type validation -->
+        <label for="email">Email Address *</label>
+        <input type="email" id="email" name="email" required placeholder="example@example.com" />
+
+        <!-- Phone input with pattern validation -->
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="10-digit number" />
+      </fieldset>
+
+      <!-- Fieldset for preferences -->
+      <fieldset>
+        <legend>Preferences</legend>
+
+        <!-- Dropdown select for language preference -->
+        <label for="language">Preferred Programming Language</label>
+        <select id="language" name="language">
+          <option value="python">Python</option>
+          <option value="js">JavaScript</option>
+          <option value="java">Java</option>
+          <option value="cpp">C++</option>
+        </select>
+
+        <!-- Radio buttons for newsletter subscription -->
+        <label>Subscribe to Newsletter?</label>
+        <input type="radio" name="subscribe" value="yes" required /> Yes
+        <input type="radio" name="subscribe" value="no" /> No
+      </fieldset>
+
+      <!-- Fieldset for comments and date -->
+      <fieldset>
+        <legend>Feedback</legend>
+
+        <!-- Textarea for comments with maxlength -->
+        <label for="comments">Your Comments</label>
+        <textarea id="comments" name="comments" rows="4" maxlength="500" placeholder="Write something..."></textarea>
+
+        <!-- Date input set to readonly -->
+        <label for="date">Today's Date</label>
+        <input type="date" id="date" name="date" readonly value="2025-08-06" />
+      </fieldset>
+
+      <!-- Submit button -->
+      <button type="submit">Submit Form</button>
+    </form>
+  </section>
+
+  <!-- Footer section -->
+  <footer>
+    <p>&copy; 2025 My HTML5 Page. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
